@@ -1,0 +1,340 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 300" width="100%" height="100%">
+  <defs>
+    <!-- ======================== GLOW & LENSING FILTERS ======================== -->
+    <filter id="intenseGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur1" />
+      <feGaussianBlur stdDeviation="24" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="coreBloom" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="22" result="b1" />
+      <feGaussianBlur stdDeviation="45" result="b2" />
+      <feMerge>
+        <feMergeNode in="b2" />
+        <feMergeNode in="b1" />
+      </feMerge>
+    </filter>
+
+    <!-- ======================== COSMIC GRADIENTS ======================== -->
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="72%">
+      <stop offset="0%" stop-color="#190d1e" />
+      <stop offset="42%" stop-color="#0f111a" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </radialGradient>
+
+    <radialGradient id="nebulaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.42" />
+      <stop offset="32%" stop-color="#f77f7f" stop-opacity="0.22" />
+      <stop offset="65%" stop-color="#7c3aed" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Doppler-Shifted Accretion Gradients (Left side hotter/brighter approaching viewer, right side deeper crimson receding) -->
+    <linearGradient id="diskGradMain" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ff4d4d" stop-opacity="0.08" />
+      <stop offset="14%" stop-color="#ff9e66" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="50%" stop-color="#ffb870" stop-opacity="0.95" />
+      <stop offset="74%" stop-color="#f77f7f" stop-opacity="0.88" />
+      <stop offset="88%" stop-color="#c92a2a" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="diskGradHot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="35%" stop-color="#ffe0b2" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#f77f7f" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#e03131" stop-opacity="0.25" />
+    </linearGradient>
+
+    <linearGradient id="diskGradOuter" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#f77f7f" stop-opacity="0.0" />
+      <stop offset="18%" stop-color="#f77f7f" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#ffa94d" stop-opacity="0.75" />
+      <stop offset="82%" stop-color="#e03131" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="lensTopGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#f77f7f" stop-opacity="0.12" />
+      <stop offset="22%" stop-color="#ffd8a8" stop-opacity="0.95" />
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="78%" stop-color="#f77f7f" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#c92a2a" stop-opacity="0.12" />
+    </linearGradient>
+
+    <linearGradient id="lensBottomGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#f77f7f" stop-opacity="0.08" />
+      <stop offset="28%" stop-color="#ffa94d" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#fff0d9" stop-opacity="0.95" />
+      <stop offset="75%" stop-color="#f77f7f" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#c92a2a" stop-opacity="0.08" />
+    </linearGradient>
+
+    <linearGradient id="photonRingGrad" x1="0%" y1="30%" x2="100%" y2="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#ffe8cc" />
+      <stop offset="70%" stop-color="#f77f7f" />
+      <stop offset="100%" stop-color="#ff5252" />
+    </linearGradient>
+
+    <!-- Clip Paths -->
+    <clipPath id="cardClip">
+      <rect x="2" y="2" width="796" height="296" rx="16" />
+    </clipPath>
+    <clipPath id="frontDiskClip">
+      <rect x="-360" y="0" width="720" height="220" />
+    </clipPath>
+
+    <!-- ======================== WHIRLING VORTEX SPIRAL ARMS ======================== -->
+    <g id="vortexArmsOuter">
+      <path d="M 75,0 C 105,65 175,95 245,45" fill="none" stroke="url(#diskGradOuter)" stroke-width="10" stroke-linecap="round" opacity="0.65" />
+      <path d="M -75,0 C -105,-65 -175,-95 -245,-45" fill="none" stroke="url(#diskGradOuter)" stroke-width="10" stroke-linecap="round" opacity="0.65" />
+      <path d="M 0,75 C -65,105 -95,175 -45,245" fill="none" stroke="url(#diskGradMain)" stroke-width="9" stroke-linecap="round" opacity="0.6" />
+      <path d="M 0,-75 C 65,-105 95,-175 45,-245" fill="none" stroke="url(#diskGradMain)" stroke-width="9" stroke-linecap="round" opacity="0.6" />
+      <path d="M 53,53 C 20,115 -45,165 -135,195" fill="none" stroke="url(#diskGradOuter)" stroke-width="8" stroke-linecap="round" opacity="0.55" />
+      <path d="M -53,-53 C -20,-115 45,-165 135,-195" fill="none" stroke="url(#diskGradOuter)" stroke-width="8" stroke-linecap="round" opacity="0.55" />
+    </g>
+
+    <g id="vortexArmsInner">
+      <path d="M 56,0 C 78,48 135,72 185,30" fill="none" stroke="url(#diskGradHot)" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+      <path d="M -56,0 C -78,-48 -135,-72 -185,-30" fill="none" stroke="url(#diskGradHot)" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+      <path d="M 0,56 C -48,78 -72,135 -30,185" fill="none" stroke="url(#diskGradHot)" stroke-width="7" stroke-linecap="round" opacity="0.85" />
+      <path d="M 0,-56 C 48,-78 72,-135 30,-185" fill="none" stroke="url(#diskGradHot)" stroke-width="7" stroke-linecap="round" opacity="0.85" />
+      <path d="M 40,40 C 12,85 -40,120 -105,142" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.85" />
+      <path d="M -40,-40 C -12,-85 40,-120 105,-142" fill="none" stroke="#ffd8a8" stroke-width="4.5" stroke-linecap="round" opacity="0.85" />
+    </g>
+
+    <g id="whirlingDiskComplete">
+      <!-- Layer 1: Outer Dust Torus (Slow Orbit) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="14s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="242" fill="none" stroke="url(#diskGradOuter)" stroke-width="24" stroke-dasharray="260 80 190 65 290 95" stroke-linecap="round" opacity="0.5" />
+        <circle cx="0" cy="0" r="216" fill="none" stroke="url(#diskGradOuter)" stroke-width="15" stroke-dasharray="160 55 230 70 180 50" stroke-linecap="round" opacity="0.65" />
+        <use href="#vortexArmsOuter" xlink:href="#vortexArmsOuter" />
+      </g>
+
+      <!-- Layer 2: Mid Accretion Plasma Spiral (Medium Orbit) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="7.5s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="190" fill="none" stroke="url(#diskGradMain)" stroke-width="20" stroke-dasharray="230 50 170 40 250 60" stroke-linecap="round" opacity="0.82" />
+        <circle cx="0" cy="0" r="164" fill="none" stroke="url(#diskGradHot)" stroke-width="12" stroke-dasharray="140 55 110 45 180 50" stroke-linecap="round" opacity="0.9" />
+        <circle cx="-178" cy="24" r="5" fill="#ffffff" />
+        <circle cx="162" cy="-58" r="4" fill="#ffd8a8" />
+        <circle cx="45" cy="172" r="4.5" fill="#f77f7f" />
+      </g>
+
+      <!-- Layer 3: High-Velocity Inner Vortex (Fast Orbit) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="4.2s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="142" fill="none" stroke="url(#diskGradMain)" stroke-width="22" stroke-dasharray="290 38 200 32 180 42" stroke-linecap="round" opacity="0.95" />
+        <circle cx="0" cy="0" r="118" fill="none" stroke="url(#diskGradHot)" stroke-width="15" stroke-dasharray="190 32 150 28 210 36" stroke-linecap="round" opacity="0.98" />
+        <use href="#vortexArmsInner" xlink:href="#vortexArmsInner" />
+        <circle cx="-122" cy="-18" r="5.5" fill="#ffffff" />
+        <circle cx="112" cy="36" r="4.5" fill="#ffe8cc" />
+      </g>
+
+      <!-- Layer 4: Innermost Stable Circular Orbit - ISCO (Relativistic Whirl) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="2.1s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="94" fill="none" stroke="#ffffff" stroke-width="11" stroke-dasharray="150 24 115 20 135 26" stroke-linecap="round" opacity="0.98" />
+        <circle cx="0" cy="0" r="76" fill="none" stroke="#ffd8a8" stroke-width="9" stroke-dasharray="105 18 90 15 110 20" stroke-linecap="round" />
+        <circle cx="0" cy="0" r="62" fill="none" stroke="#ffffff" stroke-width="6" stroke-dasharray="75 16 65 14 85 18" stroke-linecap="round" />
+      </g>
+    </g>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <!-- ======================== 1. DEEP SPACE BACKDROP ======================== -->
+    <rect x="2" y="2" width="796" height="296" rx="16" fill="url(#spaceBg)" />
+
+    <!-- Subtle Space Horizon Grid -->
+    <g stroke="#ffffff" stroke-opacity="0.028" stroke-width="1">
+      <line x1="0" y1="75" x2="800" y2="75" />
+      <line x1="0" y1="150" x2="800" y2="150" />
+      <line x1="0" y1="225" x2="800" y2="225" />
+      <line x1="200" y1="0" x2="200" y2="300" />
+      <line x1="400" y1="0" x2="400" y2="300" />
+      <line x1="600" y1="0" x2="600" y2="300" />
+    </g>
+
+    <!-- Twinkling Deep-Field Stars -->
+    <g fill="#ffffff">
+      <circle cx="48" cy="42" r="1.3"><animate attributeName="opacity" values="0.2;0.95;0.2" dur="3.1s" repeatCount="indefinite" /></circle>
+      <circle cx="115" cy="88" r="0.9" opacity="0.5"><animate attributeName="opacity" values="0.6;0.15;0.6" dur="4.4s" repeatCount="indefinite" /></circle>
+      <circle cx="72" cy="205" r="1.4" fill="#ffd8a8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.7s" repeatCount="indefinite" /></circle>
+      <circle cx="155" cy="252" r="1.0" opacity="0.45"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="5.0s" repeatCount="indefinite" /></circle>
+      <circle cx="188" cy="48" r="1.5" fill="#f77f7f"><animate attributeName="opacity" values="0.35;0.95;0.35" dur="3.6s" repeatCount="indefinite" /></circle>
+      <circle cx="245" cy="82" r="0.8" opacity="0.6" />
+      <circle cx="95" cy="148" r="1.1" opacity="0.5"><animate attributeName="opacity" values="0.15;0.75;0.15" dur="3.9s" repeatCount="indefinite" /></circle>
+      <circle cx="275" cy="258" r="1.2" opacity="0.6"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.3s" repeatCount="indefinite" /></circle>
+      <circle cx="535" cy="44" r="1.3" fill="#ffd8a8"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="2.8s" repeatCount="indefinite" /></circle>
+      <circle cx="620" cy="68" r="0.9" opacity="0.5" />
+      <circle cx="685" cy="45" r="1.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.1s" repeatCount="indefinite" /></circle>
+      <circle cx="742" cy="112" r="1.2" fill="#f77f7f"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="3.5s" repeatCount="indefinite" /></circle>
+      <circle cx="715" cy="218" r="1.3"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.0s" repeatCount="indefinite" /></circle>
+      <circle cx="645" cy="255" r="1.0" opacity="0.5"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.7s" repeatCount="indefinite" /></circle>
+      <circle cx="555" cy="245" r="1.2" fill="#ffd8a8"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.8s" repeatCount="indefinite" /></circle>
+    </g>
+
+    <!-- Ambient Singularity Nebula Glow -->
+    <ellipse cx="400" cy="150" rx="345" ry="140" fill="url(#nebulaGlow)">
+      <animate attributeName="rx" values="325;365;325" dur="4.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="4.8s" repeatCount="indefinite" />
+    </ellipse>
+
+    <!-- Gravitationally Lensed Einstein Starlight Ring -->
+    <g transform="translate(400, 150)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="24s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="110" fill="none" stroke="#ffffff" stroke-width="0.9" stroke-dasharray="22 135 14 185" stroke-linecap="round" opacity="0.38" />
+        <circle cx="0" cy="0" r="122" fill="none" stroke="#f77f7f" stroke-width="1.1" stroke-dasharray="12 175 26 155" stroke-linecap="round" opacity="0.32" />
+      </g>
+    </g>
+
+    <!-- ======================== 2. TILTED GARGANTUA BLACK HOLE SYSTEM ======================== -->
+    <g transform="translate(400, 150) rotate(-9)">
+
+      <!-- Core Atmospheric Bloom -->
+      <ellipse cx="0" cy="0" rx="205" ry="74" fill="#f77f7f" opacity="0.2" filter="url(#coreBloom)" />
+
+      <!-- LOWER GRAVITATIONAL LENSED HALO (Bent Under South Pole) -->
+      <g filter="url(#softGlow)">
+        <path d="M -90,6 A 90,82 0 0,0 90,6" fill="none" stroke="url(#lensBottomGrad)" stroke-width="13" stroke-linecap="round" opacity="0.88" />
+        <path d="M -78,5 A 78,70 0 0,0 78,5" fill="none" stroke="#ffe8cc" stroke-width="5" stroke-dasharray="48 18 62 16" stroke-linecap="round" opacity="0.92">
+          <animate attributeName="stroke-dashoffset" from="0" to="-144" dur="2.0s" repeatCount="indefinite" />
+        </path>
+        <path d="M -66,4 A 66,58 0 0,0 66,4" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="32 22 40 18" stroke-linecap="round" opacity="0.85">
+          <animate attributeName="stroke-dashoffset" from="0" to="-112" dur="1.4s" repeatCount="indefinite" />
+        </path>
+      </g>
+
+      <!-- UPPER GRAVITATIONAL LENSED HALO (Bent Over North Pole) -->
+      <g filter="url(#softGlow)">
+        <path d="M -100,-3 A 100,92 0 0,1 100,-3" fill="none" stroke="url(#lensTopGrad)" stroke-width="17" stroke-linecap="round" opacity="0.96" />
+        <path d="M -88,-2 A 88,80 0 0,1 88,-2" fill="none" stroke="#ffffff" stroke-width="6.5" stroke-dasharray="58 20 72 18" stroke-linecap="round" opacity="0.96">
+          <animate attributeName="stroke-dashoffset" from="0" to="168" dur="1.8s" repeatCount="indefinite" />
+        </path>
+        <path d="M -75,-2 A 75,67 0 0,1 75,-2" fill="none" stroke="#ffd8a8" stroke-width="4" stroke-dasharray="38 22 48 18" stroke-linecap="round" opacity="0.9">
+          <animate attributeName="stroke-dashoffset" from="0" to="126" dur="1.3s" repeatCount="indefinite" />
+        </path>
+      </g>
+
+      <!-- ======================== 3. BACK ACCRETION DISK (BEHIND EVENT HORIZON) ======================== -->
+      <g transform="scale(1, 0.28)" filter="url(#softGlow)">
+        <use href="#whirlingDiskComplete" xlink:href="#whirlingDiskComplete" />
+      </g>
+
+      <!-- ======================== 4. EVENT HORIZON & PHOTON RING ======================== -->
+      <!-- Glowing Photon Sphere Outer Ring -->
+      <circle cx="0" cy="0" r="55" fill="none" stroke="url(#photonRingGrad)" stroke-width="5.5" filter="url(#softGlow)" opacity="0.98">
+        <animate attributeName="r" values="54.2;56;54.2" dur="2.2s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- High-Speed Spinning Photon Ring Arcs -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="1.4s" repeatCount="indefinite" />
+        <circle cx="0" cy="0" r="52.5" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-dasharray="68 42 88 50" stroke-linecap="round" opacity="0.98" />
+      </g>
+
+      <!-- THE SCHWARZSCHILD EVENT HORIZON (Pitch-Black Singularity Core) -->
+      <circle cx="0" cy="0" r="50.5" fill="#000000" />
+      <circle cx="0" cy="0" r="50.5" fill="none" stroke="#fff5e6" stroke-width="1.3" opacity="0.9" />
+
+      <!-- ======================== 5. FRONT ACCRETION DISK (OCLUDING FRONT OF BLACK HOLE) ======================== -->
+      <g clip-path="url(#frontDiskClip)">
+        <g transform="scale(1, 0.28)" filter="url(#softGlow)">
+          <use href="#whirlingDiskComplete" xlink:href="#whirlingDiskComplete" />
+        </g>
+      </g>
+
+      <!-- Explicit Relativistic Equatorial Streams Crossing Directly in Front of the Shadow -->
+      <g filter="url(#softGlow)">
+        <!-- Outer Front Stream -->
+        <path d="M -215,0 A 215,60 0 0,0 215,0" fill="none" stroke="url(#diskGradMain)" stroke-width="9" stroke-dasharray="140 45 180 50" stroke-linecap="round" opacity="0.9">
+          <animate attributeName="stroke-dashoffset" from="415" to="0" dur="2.6s" repeatCount="indefinite" />
+        </path>
+        <!-- Mid Front White-Hot Stream -->
+        <path d="M -165,0 A 165,46 0 0,0 165,0" fill="none" stroke="url(#diskGradHot)" stroke-width="7.5" stroke-dasharray="110 35 140 40" stroke-linecap="round" opacity="0.98">
+          <animate attributeName="stroke-dashoffset" from="325" to="0" dur="1.8s" repeatCount="indefinite" />
+        </path>
+        <!-- Inner Razor-Sharp Photon Stream -->
+        <path d="M -120,0 A 120,33 0 0,0 120,0" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-dasharray="85 28 105 32" stroke-linecap="round" opacity="0.98">
+          <animate attributeName="stroke-dashoffset" from="250" to="0" dur="1.2s" repeatCount="indefinite" />
+        </path>
+      </g>
+
+      <!-- Relativistic Doppler Beaming Hotspot (Left Wing Approaching Observer) -->
+      <ellipse cx="-116" cy="7" rx="54" ry="12" fill="#ffffff" opacity="0.38" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="0.25;0.58;0.25" dur="2.0s" repeatCount="indefinite" />
+        <animate attributeName="rx" values="46;60;46" dur="2.0s" repeatCount="indefinite" />
+      </ellipse>
+
+    </g>
+
+    <!-- ======================== 6. INFALLING MATTER & HAWKING RADIATION SPARKS ======================== -->
+    <g filter="url(#softGlow)">
+      <circle r="2.5" fill="#ffffff">
+        <animateMotion dur="2.9s" repeatCount="indefinite" path="M 155,112 C 210,72 310,62 375,112 C 415,142 410,164 400,150" />
+        <animate attributeName="opacity" values="0;1;1;0" dur="2.9s" repeatCount="indefinite" />
+      </circle>
+      <circle r="2.1" fill="#ffd8a8">
+        <animateMotion dur="2.5s" begin="0.7s" repeatCount="indefinite" path="M 645,182 C 580,218 480,222 420,182 C 390,162 392,142 400,150" />
+        <animate attributeName="opacity" values="0;0.95;0.95;0" dur="2.5s" begin="0.7s" repeatCount="indefinite" />
+      </circle>
+      <circle r="1.9" fill="#f77f7f">
+        <animateMotion dur="3.3s" begin="1.3s" repeatCount="indefinite" path="M 225,205 C 290,225 370,210 412,170 C 425,155 410,144 400,150" />
+        <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3.3s" begin="1.3s" repeatCount="indefinite" />
+      </circle>
+      <circle r="2.3" fill="#ffffff">
+        <animateMotion dur="2.7s" begin="1.8s" repeatCount="indefinite" path="M 578,92 C 510,72 430,88 388,128 C 378,142 390,154 400,150" />
+        <animate attributeName="opacity" values="0;1;1;0" dur="2.7s" begin="1.8s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- ======================== 7. SCI-FI TELEMETRY HUD OVERLAY ======================== -->
+    <g stroke="#f77f7f" stroke-width="1.5" fill="none" opacity="0.55">
+      <path d="M 18,34 L 18,18 L 34,18" />
+      <path d="M 782,34 L 782,18 L 766,18" />
+      <path d="M 18,266 L 18,282 L 34,282" />
+      <path d="M 782,266 L 782,282 L 766,282" />
+    </g>
+
+    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" fill="#c9d1d9" opacity="0.8">
+      <circle cx="30" cy="29" r="3.5" fill="#f77f7f">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
+      </circle>
+      <text x="40" y="32" fill="#f77f7f" font-weight="bold" letter-spacing="1.5">SINGULARITY // GARGANTUA-CLASS</text>
+      <text x="28" y="47" fill="#8b949e" font-size="9" letter-spacing="0.8">SPIN: 0.998c  •  DOPPLER: RELATIVISTIC</text>
+    </g>
+
+    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#8b949e" text-anchor="end" opacity="0.8">
+      <text x="770" y="32" fill="#ffd8a8" font-weight="bold" letter-spacing="1.2">CURIOUSKARTIK // ARENA</text>
+      <text x="770" y="47" font-size="9" letter-spacing="0.8">GRAVITY WELL: PULLING IDEAS INTO REALITY</text>
+    </g>
+
+    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" opacity="0.75">
+      <text x="28" y="275" letter-spacing="1">ACCRETION STREAM: <tspan fill="#f77f7f">OFFLINE-FIRST PWAs</tspan> • <tspan fill="#ffd8a8">FULL-STACK</tspan> • <tspan fill="#ffffff">LOCAL AI</tspan></text>
+    </g>
+
+    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end" opacity="0.8">
+      <text x="770" y="275" letter-spacing="1">EVENT HORIZON: <tspan fill="#2ea44f">ONLINE</tspan> // CLASS OF 2029</text>
+    </g>
+
+    <rect x="2" y="2" width="796" height="296" rx="16" fill="none" stroke="#30363d" stroke-width="1.5" />
+  </g>
+</svg>
+
