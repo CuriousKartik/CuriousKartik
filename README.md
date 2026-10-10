@@ -19,7 +19,6 @@
   <a href="https://leetcode.com/u/Kartikey7-Codes/">
     <img src="https://img.shields.io/badge/LeetCode-Kartikey7--Codes-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/>
   </a>
-  <img src="https://komarev.com/ghpvc/?username=CuriousKartik&label=Profile%20Views&color=f77f7f&style=for-the-badge" alt="Profile Views"/>
 </p>
 
 <!-- ======================== WHIRLING MINI BLACK HOLE CENTERPIECE ======================== -->
