@@ -250,7 +250,7 @@ Sharpening data structures, algorithms, and problem-solving consistency on **Lee
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=CuriousKartik&theme=react-dark&hide_border=true&bg_color=0d1117&color=f77f7f&line=f77f7f&point=ffffff&area=true&area_color=f77f7f" alt="Contribution Activity Graph" width="98%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CuriousKartik&theme=github_dark" alt="Contribution Activity Graph" width="98%"/>
 
 </div>
 
