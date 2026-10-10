@@ -31,7 +31,6 @@
   <a href="#-about-me"><kbd> &nbsp;⚡ About Me&nbsp; </kbd></a>&nbsp;&nbsp;
   <a href="#-tech-arsenal"><kbd> &nbsp;🛠️ Tech Arsenal&nbsp; </kbd></a>&nbsp;&nbsp;
   <a href="#-flagship-projects"><kbd> &nbsp;🚀 Flagship Projects&nbsp; </kbd></a>&nbsp;&nbsp;
-  <a href="#-engineering-architecture"><kbd> &nbsp;🧬 Architecture&nbsp; </kbd></a>&nbsp;&nbsp;
   <a href="#-competitive-programming"><kbd> &nbsp;🏆 LeetCode&nbsp; </kbd></a>&nbsp;&nbsp;
   <a href="#-github-telemetry"><kbd> &nbsp;📊 Telemetry&nbsp; </kbd></a>
 </p>
@@ -190,39 +189,6 @@ A startup product I conceived and built for college groups, roommates, and trave
 </td>
 </tr>
 </table>
-
----
-
-## 🧬 Engineering Architecture
-
-How my applications are structured across **Offline-First PWAs**, **QR Sync Workflows**, and **Full-Stack Cloud Platforms**:
-
-```mermaid
-flowchart LR
-    subgraph Client["📱 Offline-First PWA Layer"]
-        PWA["Installable PWAs<br/>(Bunker • GymTracker)"]
-        SW["Service Workers &<br/>Offline Cache"]
-        IDB["IndexedDB & Local<br/>State Persistence"]
-    end
-
-    subgraph Product["💸 Startup & QR Sync Layer"]
-        Spiliby["Spiliby (Startup Product)<br/>Offline Expense Splitter"]
-        QR["QR Peer-to-Peer Sync<br/>& UPI Payment Scanner"]
-    end
-
-    subgraph Backend["☁️ Full-Stack & Cloud Layer"]
-        ReactUI["React 19 + Vite<br/>(Farhan Fitness Zone)"]
-        Auth["Bcrypt Admin Auth &<br/>Protected Routes"]
-        Supa["Supabase PostgreSQL<br/>RLS Policies & Storage"]
-    end
-
-    PWA --> SW
-    PWA --> IDB
-    Spiliby --> QR
-    Spiliby --> IDB
-    ReactUI --> Auth
-    Auth --> Supa
-```
 
 ---
 
