@@ -19,6 +19,14 @@
       </feMerge>
     </filter>
 
+    <filter id="shipGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
     <filter id="coreBloom" x="-80%" y="-80%" width="260%" height="260%">
       <feGaussianBlur stdDeviation="22" result="b1" />
       <feGaussianBlur stdDeviation="45" result="b2" />
@@ -42,7 +50,7 @@
       <stop offset="100%" stop-color="#0d1117" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Doppler-Shifted Accretion Gradients (Left side hotter/brighter approaching viewer, right side deeper crimson receding) -->
+    <!-- Doppler-Shifted Accretion Gradients -->
     <linearGradient id="diskGradMain" x1="0%" y1="50%" x2="100%" y2="50%">
       <stop offset="0%" stop-color="#ff4d4d" stop-opacity="0.08" />
       <stop offset="14%" stop-color="#ff9e66" stop-opacity="0.9" />
@@ -91,6 +99,28 @@
       <stop offset="100%" stop-color="#ff5252" />
     </linearGradient>
 
+    <!-- Spaceship Gradients -->
+    <linearGradient id="shipHullGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#cbd5e1" />
+      <stop offset="80%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <linearGradient id="thrusterPlume" x1="100%" y1="50%" x2="0%" y2="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#818cf8" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="orbitWakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.05" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.45" />
+      <stop offset="85%" stop-color="#f77f7f" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9" />
+    </linearGradient>
+
     <!-- Clip Paths -->
     <clipPath id="cardClip">
       <rect x="2" y="2" width="796" height="296" rx="16" />
@@ -98,6 +128,10 @@
     <clipPath id="frontDiskClip">
       <rect x="-360" y="0" width="720" height="220" />
     </clipPath>
+
+    <!-- ======================== SPACESHIP SPIRAL ORBIT & PLUNGE PATH ======================== -->
+    <!-- 2.5 orbital loops spiraling inward from deep space into the Event Horizon at (400, 150) -->
+    <path id="shipSpiralPath" d="M 55,52 C 115,195 275,248 445,224 C 625,198 678,124 572,82 C 468,42 262,56 198,125 C 138,188 292,216 442,196 C 568,178 585,115 482,92 C 385,72 278,96 272,144 C 266,184 362,194 428,172 C 472,156 445,128 400,150" />
 
     <!-- ======================== WHIRLING VORTEX SPIRAL ARMS ======================== -->
     <g id="vortexArmsOuter">
@@ -254,7 +288,7 @@
       <circle cx="0" cy="0" r="50.5" fill="#000000" />
       <circle cx="0" cy="0" r="50.5" fill="none" stroke="#fff5e6" stroke-width="1.3" opacity="0.9" />
 
-      <!-- ======================== 5. FRONT ACCRETION DISK (OCLUDING FRONT OF BLACK HOLE) ======================== -->
+      <!-- ======================== 5. FRONT ACCRETION DISK (OCCLUDING FRONT OF BLACK HOLE) ======================== -->
       <g clip-path="url(#frontDiskClip)">
         <g transform="scale(1, 0.28)" filter="url(#softGlow)">
           <use href="#whirlingDiskComplete" xlink:href="#whirlingDiskComplete" />
@@ -263,15 +297,12 @@
 
       <!-- Explicit Relativistic Equatorial Streams Crossing Directly in Front of the Shadow -->
       <g filter="url(#softGlow)">
-        <!-- Outer Front Stream -->
         <path d="M -215,0 A 215,60 0 0,0 215,0" fill="none" stroke="url(#diskGradMain)" stroke-width="9" stroke-dasharray="140 45 180 50" stroke-linecap="round" opacity="0.9">
           <animate attributeName="stroke-dashoffset" from="415" to="0" dur="2.6s" repeatCount="indefinite" />
         </path>
-        <!-- Mid Front White-Hot Stream -->
         <path d="M -165,0 A 165,46 0 0,0 165,0" fill="none" stroke="url(#diskGradHot)" stroke-width="7.5" stroke-dasharray="110 35 140 40" stroke-linecap="round" opacity="0.98">
           <animate attributeName="stroke-dashoffset" from="325" to="0" dur="1.8s" repeatCount="indefinite" />
         </path>
-        <!-- Inner Razor-Sharp Photon Stream -->
         <path d="M -120,0 A 120,33 0 0,0 120,0" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-dasharray="85 28 105 32" stroke-linecap="round" opacity="0.98">
           <animate attributeName="stroke-dashoffset" from="250" to="0" dur="1.2s" repeatCount="indefinite" />
         </path>
@@ -287,25 +318,101 @@
 
     <!-- ======================== 6. INFALLING MATTER & HAWKING RADIATION SPARKS ======================== -->
     <g filter="url(#softGlow)">
-      <circle r="2.5" fill="#ffffff">
+      <circle r="2.2" fill="#ffffff">
         <animateMotion dur="2.9s" repeatCount="indefinite" path="M 155,112 C 210,72 310,62 375,112 C 415,142 410,164 400,150" />
         <animate attributeName="opacity" values="0;1;1;0" dur="2.9s" repeatCount="indefinite" />
       </circle>
-      <circle r="2.1" fill="#ffd8a8">
+      <circle r="1.9" fill="#ffd8a8">
         <animateMotion dur="2.5s" begin="0.7s" repeatCount="indefinite" path="M 645,182 C 580,218 480,222 420,182 C 390,162 392,142 400,150" />
         <animate attributeName="opacity" values="0;0.95;0.95;0" dur="2.5s" begin="0.7s" repeatCount="indefinite" />
       </circle>
-      <circle r="1.9" fill="#f77f7f">
+      <circle r="1.7" fill="#f77f7f">
         <animateMotion dur="3.3s" begin="1.3s" repeatCount="indefinite" path="M 225,205 C 290,225 370,210 412,170 C 425,155 410,144 400,150" />
         <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3.3s" begin="1.3s" repeatCount="indefinite" />
       </circle>
-      <circle r="2.3" fill="#ffffff">
-        <animateMotion dur="2.7s" begin="1.8s" repeatCount="indefinite" path="M 578,92 C 510,72 430,88 388,128 C 378,142 390,154 400,150" />
-        <animate attributeName="opacity" values="0;1;1;0" dur="2.7s" begin="1.8s" repeatCount="indefinite" />
-      </circle>
     </g>
 
-    <!-- ======================== 7. SCI-FI TELEMETRY HUD OVERLAY ======================== -->
+    <!-- ======================== 7. SPACESHIP ORBITING & PLUNGING INTO EVENT HORIZON ======================== -->
+    <!-- Subtle Telemetry Orbital Trajectory Line -->
+    <use href="#shipSpiralPath" xlink:href="#shipSpiralPath" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 7" opacity="0.22" />
+
+    <!-- Glowing Ion Wake Stream Following the Spaceship's Path -->
+    <path d="M 55,52 C 115,195 275,248 445,224 C 625,198 678,124 572,82 C 468,42 262,56 198,125 C 138,188 292,216 442,196 C 568,178 585,115 482,92 C 385,72 278,96 272,144 C 266,184 362,194 428,172 C 472,156 445,128 400,150"
+          fill="none" stroke="url(#orbitWakeGrad)" stroke-width="2.2" stroke-dasharray="75 2400" stroke-linecap="round" filter="url(#softGlow)" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" values="75;-2150" dur="8.5s" repeatCount="indefinite" />
+    </path>
+
+    <!-- THE INTERSTELLAR RANGER SPACESHIP -->
+    <g filter="url(#shipGlow)">
+      <!-- Motion along the 2.5-loop inward gravitational spiral with auto-banking tangent rotation -->
+      <animateMotion dur="8.5s" repeatCount="indefinite" rotate="auto"
+                     keyPoints="0; 0.36; 0.72; 0.92; 1"
+                     keyTimes="0; 0.42; 0.75; 0.92; 1"
+                     calcMode="linear">
+        <mpath href="#shipSpiralPath" xlink:href="#shipSpiralPath" />
+      </animateMotion>
+
+      <!-- Fade in on deep-space entry, stay bright during orbit, spaghettify/fade out as it crosses the Event Horizon -->
+      <animate attributeName="opacity"
+               values="0; 1; 1; 1; 0; 0"
+               keyTimes="0; 0.06; 0.78; 0.90; 0.96; 1"
+               dur="8.5s" repeatCount="indefinite" />
+
+      <g>
+        <!-- Dynamic 3D perspective scaling: larger on front pass, shrinking as it spirals into the singularity -->
+        <animateTransform attributeName="transform" type="scale"
+                          values="0.75; 1.25; 0.92; 1.12; 0.78; 0.12"
+                          keyTimes="0; 0.22; 0.48; 0.68; 0.86; 1"
+                          dur="8.5s" repeatCount="indefinite" />
+
+        <!-- 1. Twin Plasma Ion Thruster Plumes (Rear -X) -->
+        <g>
+          <animateTransform attributeName="transform" type="scale"
+                            values="1,1; 1.45,0.82; 0.92,1.15; 1.3,0.9; 1,1"
+                            dur="0.22s" repeatCount="indefinite" />
+          <!-- Main Outer Ion Jet -->
+          <polygon points="-9,0 -36,-5 -27,0 -36,5" fill="url(#thrusterPlume)" />
+          <!-- Inner White-Hot Plasma Core -->
+          <polygon points="-8,0 -21,-2.2 -17,0 -21,2.2" fill="#ffffff" />
+        </g>
+
+        <!-- Thruster Afterburner Core -->
+        <ellipse cx="-9.5" cy="0" rx="3.5" ry="2.2" fill="#e0f2fe" />
+
+        <!-- 2. Swept-Wing Futuristic Spacecraft Hull (Facing +X) -->
+        <!-- Outer Delta Wings -->
+        <polygon points="15,0 3,-3.8 -8,-10.5 -11.5,-8.2 -7.5,-2.8 -10.5,0 -7.5,2.8 -11.5,8.2 -8,10.5 3,3.8"
+                 fill="url(#shipHullGrad)" stroke="#f8fafc" stroke-width="0.6" />
+
+        <!-- Heat-Shield Wing Trim Reflecting Accretion Glow -->
+        <polyline points="-8,-10.5 3,-3.8 15,0 3,3.8 -8,10.5"
+                  fill="none" stroke="#f77f7f" stroke-width="0.9" opacity="0.85" />
+
+        <!-- Central Fuselage Spine -->
+        <polygon points="15,0 1,-2.3 -9.5,-1.8 -10.5,0 -9.5,1.8 1,2.3"
+                 fill="#f8fafc" />
+
+        <!-- Glowing Cyan Cockpit Canopy -->
+        <ellipse cx="4.8" cy="0" rx="3.6" ry="1.35" fill="#0284c7" stroke="#bae6fd" stroke-width="0.5" />
+        <ellipse cx="5.6" cy="-0.3" rx="1.6" ry="0.5" fill="#ffffff" opacity="0.9" />
+
+        <!-- Blinking Wingtip Strobe Beacons -->
+        <circle cx="-8.2" cy="-9.5" r="1.3" fill="#38bdf8">
+          <animate attributeName="opacity" values="1;0.1;1" dur="0.6s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-8.2" cy="9.5" r="1.3" fill="#f77f7f">
+          <animate attributeName="opacity" values="0.1;1;0.1" dur="0.6s" repeatCount="indefinite" />
+        </circle>
+      </g>
+    </g>
+
+    <!-- Event Horizon Entry Flash (Fires right when the spaceship plunges into (400, 150) at t ≈ 7.8s) -->
+    <circle cx="400" cy="150" r="8" fill="none" stroke="#38bdf8" stroke-width="2.5" filter="url(#softGlow)" opacity="0">
+      <animate attributeName="r" values="6; 54; 68" keyTimes="0; 0.88; 1" dur="8.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 0; 0.95; 0" keyTimes="0; 0.88; 0.93; 1" dur="8.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- ======================== 8. SCI-FI TELEMETRY HUD OVERLAY ======================== -->
     <g stroke="#f77f7f" stroke-width="1.5" fill="none" opacity="0.55">
       <path d="M 18,34 L 18,18 L 34,18" />
       <path d="M 782,34 L 782,18 L 766,18" />
@@ -318,7 +425,7 @@
         <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite" />
       </circle>
       <text x="40" y="32" fill="#f77f7f" font-weight="bold" letter-spacing="1.5">SINGULARITY // GARGANTUA-CLASS</text>
-      <text x="28" y="47" fill="#8b949e" font-size="9" letter-spacing="0.8">SPIN: 0.998c  •  DOPPLER: RELATIVISTIC</text>
+      <text x="28" y="47" fill="#8b949e" font-size="9" letter-spacing="0.8">SPIN: 0.998c  •  CRAFT: RANGER-01 IN ORBIT</text>
     </g>
 
     <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#8b949e" text-anchor="end" opacity="0.8">
@@ -326,15 +433,10 @@
       <text x="770" y="47" font-size="9" letter-spacing="0.8">GRAVITY WELL: PULLING IDEAS INTO REALITY</text>
     </g>
 
-    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" opacity="0.75">
-      <text x="28" y="275" letter-spacing="1">ACCRETION STREAM: <tspan fill="#f77f7f">OFFLINE-FIRST PWAs</tspan> • <tspan fill="#ffd8a8">FULL-STACK</tspan> • <tspan fill="#ffffff">STARTUP PRODUCTS</tspan></text>
-    </g>
-
     <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9" fill="#8b949e" text-anchor="end" opacity="0.8">
-      <text x="770" y="275" letter-spacing="1">EVENT HORIZON: <tspan fill="#2ea44f">ONLINE</tspan> // CLASS OF 2029</text>
+      <text x="770" y="275" letter-spacing="1">EVENT HORIZON: <tspan fill="#38bdf8">SLINGSHOT ACTIVE</tspan> // CLASS OF 2029</text>
     </g>
 
     <rect x="2" y="2" width="796" height="296" rx="16" fill="none" stroke="#30363d" stroke-width="1.5" />
   </g>
 </svg>
-

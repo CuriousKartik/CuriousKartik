@@ -159,16 +159,16 @@ A full-stack gym platform built on a scalable **React 19 + Vite + Supabase** arc
 ### 💸 [Spiliby](https://github.com/CuriousKartik/Spiliby)
 **Startup Product • Offline-First Group Expense Splitter**
 
-A startup product I conceived and led for college groups, roommates, and travellers to split expenses with **zero internet or backend**, using **QR-code peer-to-peer ledger syncing** and direct UPI QR scanning. I drove the product vision and web experience ([**SpilibyWeb**](https://github.com/CuriousKartik/SpilibyWeb)), while my friend **Junaid** engineered the mobile app.
+A startup product I conceived and built for college groups, roommates, and travellers to split expenses with **zero internet or backend**, using **QR-code peer-to-peer ledger syncing** and direct UPI QR scanning. Originally built as a web app and converted into a mobile app by my friend **Junaid**.
 
 <p>
   <img src="https://img.shields.io/badge/Role-Founder_%26_Product-f77f7f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/App_Dev-Junaid-0A66C2?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Mobile_App-Junaid-0A66C2?style=flat-square"/>
   <img src="https://img.shields.io/badge/Offline_First-QR_Sync-5A0FC8?style=flat-square"/>
   <img src="https://img.shields.io/badge/UPI_Ready-2ea44f?style=flat-square"/>
 </p>
 
-[**↗ Product Repo**](https://github.com/CuriousKartik/Spiliby) &nbsp;•&nbsp; [**↗ SpilibyWeb**](https://github.com/CuriousKartik/SpilibyWeb)
+[**↗ Explore Repository**](https://github.com/CuriousKartik/Spiliby)
 
 </td>
 <td width="50%" valign="top">
@@ -207,7 +207,7 @@ flowchart LR
     end
 
     subgraph Product["💸 Startup & QR Sync Layer"]
-        Spiliby["Spiliby Ecosystem<br/>(Product & SpilibyWeb)"]
+        Spiliby["Spiliby (Startup Product)<br/>Offline Expense Splitter"]
         QR["QR Peer-to-Peer Sync<br/>& UPI Payment Scanner"]
     end
 
