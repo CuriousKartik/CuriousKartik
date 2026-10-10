@@ -5,7 +5,7 @@
 
 <!-- ======================== TYPING ANIMATION ======================== -->
 <a href="https://github.com/CuriousKartik">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2600&pause=900&color=F77F7F&center=true&vCenter=true&width=750&lines=Building+offline-first+PWAs+%26+scalable+full-stack+apps;Shipping+end-to-end+JavaScript%2C+TypeScript+%26+React+systems;Crafting+voice-first+local+AI+agents+(Hey+Jarvis+%F0%9F%8E%99%EF%B8%8F);Turning+everyday+campus+problems+into+real-world+products;2nd-Year+Undergrad+(Class+of+2029)+%E2%80%A2+Open+to+Collaborations" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2600&pause=900&color=F77F7F&center=true&vCenter=true&width=750&lines=Building+offline-first+PWAs+%26+scalable+full-stack+web+apps;Writing+clean+JavaScript+%26+React+systems+end-to-end;Turning+everyday+campus+problems+into+real-world+products;2nd-Year+Undergrad+(Class+of+2029)+%E2%80%A2+Open+to+Collaborations" alt="Typing SVG" />
 </a>
 
 <!-- ======================== SOCIAL & STATUS BADGES ======================== -->
@@ -48,40 +48,40 @@
 <td width="290" valign="top" align="center">
   <img src="me.jpg" width="270" style="border-radius: 14px;" alt="Kartikey Gupta speaking with a microphone"/>
   <br/>
-  <sub><b>🎤 Builder • Speaker • Problem Solver</b></sub>
+  <sub><b>🎤 Builder • Product Thinker • Problem Solver</b></sub>
   <br/><br/>
   <img src="https://img.shields.io/badge/Status-Building%20%26%20Shipping-2ea44f?style=flat-square&logo=rocket&logoColor=white" alt="Status"/>
   <img src="https://img.shields.io/badge/Batch-Class%20of%202029-f77f7f?style=flat-square" alt="Class of 2029"/>
 </td>
 <td valign="top">
 
-Hey there! I'm **Kartikey Gupta** — a **2nd-year undergraduate (Class of 2029)** obsessed with building **offline-first Progressive Web Apps (PWAs)**, **production full-stack web platforms**, and **local AI desktop agents**.
+Hey there! I'm **Kartikey Gupta** — a **2nd-year undergraduate (Class of 2029)** who builds **offline-first Progressive Web Apps (PWAs)**, **full-stack web platforms**, and **student-focused startup products**.
 
-Instead of building toy tutorials, I look for friction in everyday life—whether it's **calculating college attendance margins**, **splitting group trip bills without mobile data**, **running QR-based gym check-ins**, or **controlling a Windows PC hands-free in Hinglish**—and engineer fast, zero-fluff tools that people actually use.
+I love turning everyday friction—whether it's **calculating college attendance margins**, ** managing class timetables**, **running QR-based gym check-ins**, or **launching a zero-internet group bill splitter**—into fast, practical tools that people actually use.
 
 ```bash
 kartikey@singularity:~$ neofetch --developer
 ────────────────────────────────────────────────────────────
-OS          : Windows / Web / PWA Runtime
+OS          : Web / PWA Runtime / Windows
 Host        : Kartikey Gupta (@CuriousKartik)
 Kernel      : 2nd-Year Undergrad • Class of 2029
 Packages    : React 19, Vite, Supabase, Service Workers, IndexedDB
-Shell       : JavaScript (ES6+) / TypeScript / Python / SQL
-Focus       : Offline-First PWAs • Full-Stack Apps • Local AI
-Shipped     : Aclypto (Jarvis), Spiliby, Bunker, FarhanFitness
+Shell       : JavaScript (ES6+) / HTML5 / CSS3 / SQL
+Focus       : Offline-First PWAs • Full-Stack Web • Startup Products
+Shipped     : Bunker, FarhanFitnessZone, Spiliby, GymTracker, ClassBoard
 Status      : Open to Internships, Hackathons & Collabs 🚀
 ────────────────────────────────────────────────────────────
 kartikey@singularity:~$ echo $PHILOSOPHY
-"Build software that works effortlessly — even when the Wi-Fi dies."
+"Build tools that solve real problems — even when the Wi-Fi dies."
 ```
 
 <details>
-<summary><b>🔍 Click to expand: My Engineering Principles & Current Focus</b></summary>
+<summary><b>🔍 Click to expand: My Engineering & Product Principles</b></summary>
 <br/>
 
-- **📡 Offline-First by Default:** Most student and field apps fail when campus Wi-Fi drops. I design with `Service Workers`, `IndexedDB`, and QR-based peer-to-peer payloads so apps stay functional anywhere.
-- **🔐 Real-World Full-Stack Security:** From `bcrypt` admin authentication and JWT middleware to Supabase **Row-Level Security (RLS)** policies and media storage buckets.
-- **🎙️ Voice & Local AI Interfaces:** Building low-latency desktop assistants ([Aclypto / Jarvis](https://github.com/CuriousKartik/Aclypto)) that execute real OS/browser workflows locally with zero cloud lock-in.
+- **📡 Offline-First by Default:** Most student and field apps fail when campus Wi-Fi drops. I design with `Service Workers`, `IndexedDB`, and QR-based peer-to-peer data sync so tools work reliably anywhere.
+- **🚀 Startup & Product Execution:** From spotting everyday student pain points to shaping product workflows, building web platforms, and collaborating on product launches like **[Spiliby](https://github.com/CuriousKartik/Spiliby)**.
+- **🔐 Real-World Full-Stack Security:** Implementing `bcrypt` admin authentication, protected routes, and Supabase **Row-Level Security (RLS)** policies with cloud storage buckets.
 - **⚡ Performance & UX Polish:** Fast load times, zero-dependency vanilla JS where appropriate, and modern React + Vite architectures when scaling up.
 
 </details>
@@ -98,14 +98,14 @@ kartikey@singularity:~$ echo $PHILOSOPHY
 
 | Domain | Technologies & Tools |
 | :--- | :--- |
-| **Languages** | ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) |
-| **Frontend & PWA** | ![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Offline_First-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white) ![IndexedDB](https://img.shields.io/badge/IndexedDB-Local_Storage-f77f7f?style=for-the-badge&logo=databricks&logoColor=white) |
-| **Backend & Cloud** | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) ![REST APIs](https://img.shields.io/badge/REST_APIs-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![JWT / Bcrypt](https://img.shields.io/badge/Auth-Bcrypt_%26_RLS-critical?style=for-the-badge&logo=jsonwebtokens&logoColor=white) |
-| **Dev Tools & Workflow** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white) ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
+| **Languages** | ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **Frontend & PWA** | ![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Offline_First-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white) ![Service Workers](https://img.shields.io/badge/Service_Workers-f77f7f?style=for-the-badge&logo=googlechrome&logoColor=white) ![IndexedDB](https://img.shields.io/badge/IndexedDB-Local_Storage-2ea44f?style=for-the-badge&logo=databricks&logoColor=white) |
+| **Backend & Database** | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) ![REST APIs](https://img.shields.io/badge/REST_APIs-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Auth & RLS](https://img.shields.io/badge/Auth-Bcrypt_%26_RLS-critical?style=for-the-badge&logo=jsonwebtokens&logoColor=white) |
+| **Dev Tools & Workflow** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=js,ts,py,html,css,react,vite,supabase,postgres,git,github,vscode,vercel&perline=7&theme=dark" alt="Tech Stack Icons" />
+<img src="https://skillicons.dev/icons?i=js,html,css,react,vite,supabase,postgres,git,github,vscode,vercel&perline=11&theme=dark" alt="Tech Stack Icons" />
 
 </div>
 
@@ -113,46 +113,9 @@ kartikey@singularity:~$ echo $PHILOSOPHY
 
 ## 🚀 Flagship Projects
 
-> **Every project below was built to solve a real workflow problem** — engineered from scratch with clean UI, offline resilience, or production-grade backend architecture.
+> **Every project below was built to solve a real problem** — from installable offline-first PWAs and full-stack platforms to student startup products.
 
 <table>
-<tr>
-<td width="50%" valign="top">
-
-### 🎙️ [Aclypto (Jarvis)](https://github.com/CuriousKartik/Aclypto)
-**Voice-Activated Local AI Desktop Assistant for Windows**
-
-A privacy-first personal AI assistant woken with `"Hey Jarvis"`. Converses naturally in **English & Hindi (Hinglish)**, controls Windows apps & browser tabs, takes voice-dictated notes, schedules calendar events, and auto-generates PowerPoint presentations—all running locally on your machine.
-
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Voice_AI-Bilingual_NLP-f77f7f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Windows_Automation-0078D6?style=flat-square&logo=windows&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Local_First-Zero_Cloud-2ea44f?style=flat-square"/>
-</p>
-
-[**↗ Explore Repository**](https://github.com/CuriousKartik/Aclypto)
-
-</td>
-<td width="50%" valign="top">
-
-### 💸 [Spiliby](https://github.com/CuriousKartik/Spiliby)
-**Offline-First Group Expense Splitter & QR Ledger**
-
-Built for college groups, roommates, and trips where internet is spotty. Supports equal, percentage, and custom bill splits with **zero backend or login**. Uses **QR-code peer-to-peer data syncing** to share group balances offline and integrates direct UPI QR scanning to settle debts instantly.
-
-<p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/PWA-Installable-5A0FC8?style=flat-square&logo=pwa&logoColor=white"/>
-  <img src="https://img.shields.io/badge/IndexedDB-Offline_First-f77f7f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/QR_Sync-UPI_Ready-2ea44f?style=flat-square"/>
-</p>
-
-[**↗ Explore Repository**](https://github.com/CuriousKartik/Spiliby) &nbsp;•&nbsp; [**↗ Web Version**](https://github.com/CuriousKartik/SpilibyWeb)
-
-</td>
-</tr>
-
 <tr>
 <td width="50%" valign="top">
 
@@ -176,7 +139,7 @@ An installable mobile-first **Progressive Web App** that tracks subject-wise att
 ### 🏋️ [Farhan Fitness Zone](https://github.com/CuriousKartik/FullStack-gym-website-)
 **Production Full-Stack Gym Platform & Admin Suite**
 
-A full-stack conversion of a fitness brand into a scalable **React 19 + Vite + Supabase** architecture. Features `bcrypt` admin authentication, customer review system with image/video uploads, interactive BMI calculator, workout media hub, and PostgreSQL Row-Level Security (RLS).
+A full-stack gym platform built on a scalable **React 19 + Vite + Supabase** architecture. Features secure `bcrypt` admin authentication, a customer review system with image/video uploads, an interactive BMI calculator, workout media gallery, and PostgreSQL Row-Level Security (RLS).
 
 <p>
   <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
@@ -193,36 +156,37 @@ A full-stack conversion of a fitness brand into a scalable **React 19 + Vite + S
 <tr>
 <td width="50%" valign="top">
 
-### 📲 [GymTracker](https://github.com/CuriousKartik/GymTracker)
-**QR-Code Gym Check-In & Membership Management PWA**
+### 💸 [Spiliby](https://github.com/CuriousKartik/Spiliby)
+**Startup Product • Offline-First Group Expense Splitter**
 
-Streamlines daily gym operations with **unique member QR codes** and digital membership IDs. Admins scan QR codes for instant check-ins while tracking attendance history, payment logs, renewal reminders, and member analytics from a centralized dashboard.
+A startup product I conceived and led for college groups, roommates, and travellers to split expenses with **zero internet or backend**, using **QR-code peer-to-peer ledger syncing** and direct UPI QR scanning. I drove the product vision and web experience ([**SpilibyWeb**](https://github.com/CuriousKartik/SpilibyWeb)), while my friend **Junaid** engineered the mobile app.
+
+<p>
+  <img src="https://img.shields.io/badge/Role-Founder_%26_Product-f77f7f?style=flat-square"/>
+  <img src="https://img.shields.io/badge/App_Dev-Junaid-0A66C2?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Offline_First-QR_Sync-5A0FC8?style=flat-square"/>
+  <img src="https://img.shields.io/badge/UPI_Ready-2ea44f?style=flat-square"/>
+</p>
+
+[**↗ Product Repo**](https://github.com/CuriousKartik/Spiliby) &nbsp;•&nbsp; [**↗ SpilibyWeb**](https://github.com/CuriousKartik/SpilibyWeb)
+
+</td>
+<td width="50%" valign="top">
+
+### 📲 [GymTracker](https://github.com/CuriousKartik/GymTracker) & [ClassBoard](https://github.com/CuriousKartik/ClassBoard)
+**QR-Code Gym Operations PWA & Campus Timetable Hub**
+
+- **GymTracker:** Installable PWA with unique member QR check-ins, digital IDs, payment tracking, and renewal reminders ([**Membership App**](https://github.com/CuriousKartik/Gym-Membership-tracker-App)).
+- **ClassBoard:** Unified scheduling platform for professors and students to manage class timetables and track upcoming lectures in one place.
 
 <p>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
   <img src="https://img.shields.io/badge/PWA-Installable-5A0FC8?style=flat-square&logo=pwa&logoColor=white"/>
   <img src="https://img.shields.io/badge/QR_Check--In-f77f7f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Admin_Dashboard-0A66C2?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Campus_Tools-2ea44f?style=flat-square"/>
 </p>
 
-[**↗ Explore Repository**](https://github.com/CuriousKartik/GymTracker) &nbsp;•&nbsp; [**↗ Membership App**](https://github.com/CuriousKartik/Gym-Membership-tracker-App)
-
-</td>
-<td width="50%" valign="top">
-
-### 🗓️ ClassBoard & Campus Utilities
-**Collaborative Timetable & Academic Workflow Tools**
-
-A unified hub designed for professors and students to coordinate class timetables, room changes, and upcoming lectures in real time—paired with experimental utilities like [**Drainlog**](https://github.com/CuriousKartik/Drainlog) (Python) and [**HCHO**](https://github.com/CuriousKartik/HCHO) (JavaScript).
-
-<p>
-  <img src="https://img.shields.io/badge/Full--Stack_Web-f77f7f?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Student_Tools-2ea44f?style=flat-square"/>
-</p>
-
-[**↗ View All 12+ Repositories**](https://github.com/CuriousKartik?tab=repositories)
+[**↗ GymTracker Repo**](https://github.com/CuriousKartik/GymTracker) &nbsp;•&nbsp; [**↗ All Repositories**](https://github.com/CuriousKartik?tab=repositories)
 
 </td>
 </tr>
@@ -232,36 +196,33 @@ A unified hub designed for professors and students to coordinate class timetable
 
 ## 🧬 Engineering Architecture
 
-How my projects fit together across **Offline-First Client Apps**, **Full-Stack Cloud Backends**, and **Local AI Automation**:
+How my applications are structured across **Offline-First PWAs**, **QR Sync Workflows**, and **Full-Stack Cloud Platforms**:
 
 ```mermaid
 flowchart LR
-    subgraph Client["📱 Client & Offline-First Layer"]
-        PWA["Installable PWAs<br/>(Bunker • Spiliby • GymTracker)"]
-        SW["Service Workers &<br/>IndexedDB Persistence"]
-        QR["QR Peer-to-Peer Sync<br/>& Scanner Engine"]
-        ReactUI["React 19 + Vite<br/>Responsive Frontend"]
+    subgraph Client["📱 Offline-First PWA Layer"]
+        PWA["Installable PWAs<br/>(Bunker • GymTracker)"]
+        SW["Service Workers &<br/>Offline Cache"]
+        IDB["IndexedDB & Local<br/>State Persistence"]
+    end
+
+    subgraph Product["💸 Startup & QR Sync Layer"]
+        Spiliby["Spiliby Ecosystem<br/>(Product & SpilibyWeb)"]
+        QR["QR Peer-to-Peer Sync<br/>& UPI Payment Scanner"]
     end
 
     subgraph Backend["☁️ Full-Stack & Cloud Layer"]
-        API["REST API Layer &<br/>Media Upload Pipeline"]
-        Auth["Bcrypt Auth &<br/>Protected Routes"]
+        ReactUI["React 19 + Vite<br/>(Farhan Fitness Zone)"]
+        Auth["Bcrypt Admin Auth &<br/>Protected Routes"]
         Supa["Supabase PostgreSQL<br/>RLS Policies & Storage"]
     end
 
-    subgraph LocalAI["🎙️ Local AI Agent Layer"]
-        Wake["Wake Word Engine<br/>('Hey Jarvis' / Aclypto)"]
-        NLP["Bilingual Hinglish NLP<br/>& Intent Router"]
-        OS["Windows & Browser<br/>OS Automation"]
-    end
-
     PWA --> SW
-    PWA --> QR
-    ReactUI --> API
-    API --> Auth
-    API --> Supa
-    Wake --> NLP
-    NLP --> OS
+    PWA --> IDB
+    Spiliby --> QR
+    Spiliby --> IDB
+    ReactUI --> Auth
+    Auth --> Supa
 ```
 
 ---
@@ -299,7 +260,7 @@ Sharpening data structures, algorithms, and problem-solving consistency on **Lee
 
 ### 🤝 Let's Build Something Impactful
 
-Got an idea for an **offline-first tool**, a **full-stack product**, or a **hackathon collaboration**? Reach out anytime!
+Got an idea for an **offline-first tool**, a **full-stack product**, or a **startup collaboration**? Reach out anytime!
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kartikeyguptatechy">
