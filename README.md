@@ -62,10 +62,10 @@ Instead of building toy tutorials, I look for friction in everyday life—whethe
 ```bash
 kartikey@singularity:~$ neofetch --developer
 ────────────────────────────────────────────────────────────
-OS          : Windows / Web / PWA Runtime / Flutter
+OS          : Windows / Web / PWA Runtime
 Host        : Kartikey Gupta (@CuriousKartik)
 Kernel      : 2nd-Year Undergrad • Class of 2029
-Packages    : React 19, Vite, Node.js, Express, Supabase, Dart
+Packages    : React 19, Vite, Supabase, Service Workers, IndexedDB
 Shell       : JavaScript (ES6+) / TypeScript / Python / SQL
 Focus       : Offline-First PWAs • Full-Stack Apps • Local AI
 Shipped     : Aclypto (Jarvis), Spiliby, Bunker, FarhanFitness
@@ -98,14 +98,14 @@ kartikey@singularity:~$ echo $PHILOSOPHY
 
 | Domain | Technologies & Tools |
 | :--- | :--- |
-| **Languages** | ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) |
-| **Frontend & Mobile** | ![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Offline_First-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![IndexedDB](https://img.shields.io/badge/IndexedDB-Local_Storage-f77f7f?style=for-the-badge&logo=databricks&logoColor=white) |
-| **Backend & Cloud** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black) ![REST APIs](https://img.shields.io/badge/REST_APIs-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![JWT / Bcrypt](https://img.shields.io/badge/Auth-Bcrypt_%26_RLS-critical?style=for-the-badge&logo=jsonwebtokens&logoColor=white) |
+| **Languages** | ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) |
+| **Frontend & PWA** | ![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Offline_First-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white) ![IndexedDB](https://img.shields.io/badge/IndexedDB-Local_Storage-f77f7f?style=for-the-badge&logo=databricks&logoColor=white) |
+| **Backend & Cloud** | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) ![REST APIs](https://img.shields.io/badge/REST_APIs-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![JWT / Bcrypt](https://img.shields.io/badge/Auth-Bcrypt_%26_RLS-critical?style=for-the-badge&logo=jsonwebtokens&logoColor=white) |
 | **Dev Tools & Workflow** | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white) ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=js,ts,py,dart,html,css,react,vite,nodejs,express,supabase,postgres,flutter,git,github,vscode,vercel&perline=9&theme=dark" alt="Tech Stack Icons" />
+<img src="https://skillicons.dev/icons?i=js,ts,py,html,css,react,vite,supabase,postgres,git,github,vscode,vercel&perline=7&theme=dark" alt="Tech Stack Icons" />
 
 </div>
 
@@ -142,9 +142,9 @@ A privacy-first personal AI assistant woken with `"Hey Jarvis"`. Converses natur
 Built for college groups, roommates, and trips where internet is spotty. Supports equal, percentage, and custom bill splits with **zero backend or login**. Uses **QR-code peer-to-peer data syncing** to share group balances offline and integrates direct UPI QR scanning to settle debts instantly.
 
 <p>
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Flutter_/_PWA-02569B?style=flat-square&logo=flutter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/IndexedDB-Offline_First-5A0FC8?style=flat-square"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/PWA-Installable-5A0FC8?style=flat-square&logo=pwa&logoColor=white"/>
+  <img src="https://img.shields.io/badge/IndexedDB-Offline_First-f77f7f?style=flat-square"/>
   <img src="https://img.shields.io/badge/QR_Sync-UPI_Ready-2ea44f?style=flat-square"/>
 </p>
 
@@ -176,12 +176,12 @@ An installable mobile-first **Progressive Web App** that tracks subject-wise att
 ### 🏋️ [Farhan Fitness Zone](https://github.com/CuriousKartik/FullStack-gym-website-)
 **Production Full-Stack Gym Platform & Admin Suite**
 
-A full-stack conversion of a fitness brand into a scalable **React 19 + Node.js/Express + Supabase** architecture. Features `bcrypt` admin authentication, customer review system with image/video uploads, interactive BMI calculator, workout media hub, and PostgreSQL Row-Level Security (RLS).
+A full-stack conversion of a fitness brand into a scalable **React 19 + Vite + Supabase** architecture. Features `bcrypt` admin authentication, customer review system with image/video uploads, interactive BMI calculator, workout media hub, and PostgreSQL Row-Level Security (RLS).
 
 <p>
   <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
   <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Node.js_%26_Express-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Supabase-RLS_%26_Storage-3ECF8E?style=flat-square&logo=supabase&logoColor=black"/>
 </p>
 
@@ -244,7 +244,7 @@ flowchart LR
     end
 
     subgraph Backend["☁️ Full-Stack & Cloud Layer"]
-        API["Node.js + Express<br/>REST API & Multer"]
+        API["REST API Layer &<br/>Media Upload Pipeline"]
         Auth["Bcrypt Auth &<br/>Protected Routes"]
         Supa["Supabase PostgreSQL<br/>RLS Policies & Storage"]
     end
